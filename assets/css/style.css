@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+/* 300, 400, 600 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: hsl(217, 54%, 11%);
+    padding: 0 20px;
+}
+
+#container {
+    background-color: hsl(216, 50%, 16%);
+    padding: 20px 20px 30px;
+    border-radius: 20px;
+    margin: 50px 0;
+    position: relative;
+    
+}
+
+.hero {
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hero .bg-hero {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 247, 0.3);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.hero .view-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.hero:hover .bg-hero,
+.hero:hover .view-icon {
+    opacity: 1;
+}
+
+.title {
+    font-size: 24px;
+    margin: 20px 0;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+
+.description {
+    font-size: 17px;
+    color: hsl(215, 51%, 70%);
+    margin-bottom: 20px;
+    line-height: 25px;
+    
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.details-container .detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.details-container .detail:first-child {
+    color: hsl(178, 100%, 50%);
+}
+
+.details-container .detail:last-child {
+    color: hsl(215, 51%, 70%);
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: hsl(215, 32%, 27%);
+}
+
+.user-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.user-container img {
+    width: 40px;
+    border: 2px solid hsl(0, 0%, 100%);
+    border-radius: 50px;
+}
+
+.user-container .author {
+    color: hsl(215, 51%, 70%);
+    font-size: 15px;
+}
+
+.user-container .name {
+    color: hsla(0, 0%, 100%, .8);
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.title:hover,
+.user-container .name:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+@media(min-width: 375px) {
+    #container {
+        width: 335px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .title {
+        font-size: 22px;
+    }
+}
